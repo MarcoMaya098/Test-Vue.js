@@ -64,7 +64,7 @@ export default {
     return {
       autores: [],
       currentPage: 1,
-      pageSize: 10, // Número de autores por página
+      pageSize: 10, 
     };
   },
   computed: {
@@ -93,7 +93,6 @@ export default {
     eliminarAutor(idAutor) {
       axios.delete(`http://127.0.0.1:8080/api/deleteAutor/${idAutor}`)
         .then(() => {
-          // Eliminar el autor de la lista después de eliminarlo en el servidor
           this.autores = this.autores.filter(autor => autor.idAutor !== idAutor);
         })
         .catch(error => {

@@ -62,7 +62,7 @@ export default {
     return {
       subcategorias: [],
       currentPage: 1,
-      pageSize: 10, // Número de subcategorías por página
+      pageSize: 10, 
     };
   },
   computed: {
@@ -91,7 +91,6 @@ export default {
     eliminarSubcategoria(idSubcategoria) {
       axios.delete(`http://127.0.0.1:8080/api/deleteSubcategoria/${idSubcategoria}`)
         .then(() => {
-          // Eliminar la subcategoría de la lista después de eliminarla en el servidor
           this.subcategorias = this.subcategorias.filter(subcategoria => subcategoria.idSubcategoria !== idSubcategoria);
         })
         .catch(error => {

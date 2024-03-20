@@ -60,7 +60,7 @@ export default {
     return {
       relaciones: [],
       currentPage: 1,
-      pageSize: 10, // Número de relaciones por página
+      pageSize: 10, 
     };
   },
   computed: {
@@ -89,7 +89,6 @@ export default {
     eliminarRelacion(idTitulo, idAutor) {
       axios.delete(`http://127.0.0.1:8080/api/deleteTituloAutor/${idTitulo}/${idAutor}`)
         .then(() => {
-          // Eliminar la relación de la lista después de eliminarla en el servidor
           this.relaciones = this.relaciones.filter(relacion => relacion.idTitulo !== idTitulo || relacion.idAutor !== idAutor);
         })
         .catch(error => {

@@ -70,7 +70,7 @@ export default {
     return {
       titulos: [],
       currentPage: 1,
-      pageSize: 10, // Número de títulos por página
+      pageSize: 10,
     };
   },
   computed: {
@@ -99,7 +99,6 @@ export default {
     eliminarTitulo(idTitulo) {
       axios.delete(`http://127.0.0.1:8080/api/deleteTitulo/${idTitulo}`)
         .then(() => {
-          // Eliminar el titulo de la lista después de eliminarlo en el servidor
           this.titulos = this.titulos.filter(titulo => titulo.idTitulo !== idTitulo);
         })
         .catch(error => {

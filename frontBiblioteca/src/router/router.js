@@ -7,7 +7,7 @@ import TituloAutorList from '../components/TituloAutorList.vue';
 import LandingPage from '../components/LandingPage.vue';
 
 const routes = [
-  { path: '/', component: LandingPage }, // Ruta para la landing page
+  { path: '/', component: LandingPage }, 
   { path: '/categorias', component: CategoriaList },
   { path: '/titulos', component: TituloList },
   { path: '/autores', component: AutorList },

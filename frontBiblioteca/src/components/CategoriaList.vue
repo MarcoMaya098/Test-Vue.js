@@ -73,7 +73,7 @@ export default {
     return {
       categorias: [],
       currentPage: 1,
-      pageSize: 5, // Número de categorías por página
+      pageSize: 5, 
     };
   },
   computed: {
@@ -104,7 +104,6 @@ export default {
       axios
         .delete(`http://127.0.0.1:9090/api/deleteCategoria/${idCategoria}`)
         .then(() => {
-          // Eliminar la categoría de la lista después de eliminarla en el servidor
           this.categorias = this.categorias.filter(
             (c) => c.idCategoria !== idCategoria
           );
