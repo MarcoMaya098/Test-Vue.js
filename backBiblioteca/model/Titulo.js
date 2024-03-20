@@ -1,6 +1,6 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../data/database');
-const Subcategoria = require('./Subcategoria'); // Importar el modelo de Subcategorias si es necesario
+const Subcategoria = require('./Subcategoria'); 
 
 const Titulo = sequelize.define('Titulo', {
     idTitulo: {
@@ -28,7 +28,7 @@ const Titulo = sequelize.define('Titulo', {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
-            model: Subcategoria, // Modelo de la tabla Subcategorias
+            model: Subcategoria,
             key: 'idSubcategoria'
         }
     }

@@ -1,6 +1,6 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../data/database');
-const Categoria = require('./Categoria'); // Importar el modelo de Categorias si es necesario
+const Categoria = require('./Categoria'); 
 
 const Subcategoria = sequelize.define('Subcategoria', {
     idSubcategoria: { 
@@ -16,13 +16,13 @@ const Subcategoria = sequelize.define('Subcategoria', {
         type: DataTypes.INTEGER, 
         allowNull: false,
         references: {
-            model: Categoria, // Modelo de la tabla Categorias
+            model: Categoria,
             key: 'idCategoria'
         }
     }
 }, {
     timestamps: false,
-    tableName: 'Subcategorias' // Nombre de la tabla en la base de datos
+    tableName: 'Subcategorias'
 });
 
 module.exports = Subcategoria;

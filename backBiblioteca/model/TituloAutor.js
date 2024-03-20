@@ -8,7 +8,7 @@ const TituloAutor = sequelize.define('TituloAutor', {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
-            model: Autor, // Modelo de la tabla Autores
+            model: Autor, 
             key: 'idAutor'
         }
     },
@@ -16,14 +16,14 @@ const TituloAutor = sequelize.define('TituloAutor', {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
-            model: Titulo, // Modelo de la tabla Titulos
+            model: Titulo,
             key: 'idTitulo'
         }
     }
 }, {
     timestamps: false,
-    tableName: 'TitulosAutores', // Nombre de la tabla en la base de datos
-    primaryKey: true // Definir la clave primaria compuesta por idAutor e idTitulo
+    tableName: 'TitulosAutores', 
+    primaryKey: true 
 });
 
 module.exports = TituloAutor;
