@@ -165,7 +165,6 @@
               >
                 Cerrar Ventana
               </button>
-              <!-- Botón para cerrar la ventana modal -->
             </form>
           </div>
         </div>
@@ -214,7 +213,6 @@
               >
                 Cerrar
               </button>
-              <!-- Botón para cerrar la ventana modal -->
             </form>
           </div>
         </div>
@@ -311,8 +309,8 @@ export default {
         .post("http://127.0.0.1:8080/api/postCategoria", { categoria: this.nuevaCategoria })
         .then(() => {
           this.getCategorias();
-          $("#modalCrear").modal("hide"); // Oculta el modal después de crear la categoría exitosamente
-          this.nuevaCategoria = ''; // Limpia el campo de entrada después de crear la categoría
+          $("#modalCrear").modal("hide"); 
+          this.nuevaCategoria = ''; 
         })
         .catch((error) => {
           console.error("Error creating categoria:", error);
